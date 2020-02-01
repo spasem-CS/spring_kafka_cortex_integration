@@ -1,0 +1,34 @@
+camel: 1.0.0
+name: default/process_record_events
+title: Process Record Events
+description: update description
+inputs:
+  - name: input1
+    title: input1
+    parameters:
+      $ref: cortex/Text
+    routing:
+      all:
+        action: anthemorg/process_record_events_test
+        runtime: cortex/functions
+        output: output1
+
+outputs:
+  - name: output1
+    title: output1
+    parameters:
+      $ref: cortex/Text
+
+properties:
+  - name: daemon.method
+    title: Daemon method
+    description: method
+    required: true
+    type: String
+    defaultValue: POST
+  - name: daemon.path
+    title: Daemon path
+    description: path
+    required: true
+    type: String
+    defaultValue: invoke
