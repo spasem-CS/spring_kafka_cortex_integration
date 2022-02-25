@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-public class RecordsProducerApplication {
+public class RecordsProducerApplication
 
 	public static void main(String[] args) {
 		System.out.println("Records Producer Application Starts");
